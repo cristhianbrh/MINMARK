@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+section.loginSection{
+    min-width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+section.loginSection>div.presentation{
+    background: linear-gradient(to bottom right, rgb(78, 58, 167),#76abec);
+    border-radius: 0 12px 12px 0;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+}
+section.loginSection>div.presentation{
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    text-align: center;
+    gap: 30px;
+}
+section.loginSection>div.presentation>p:nth-child(1){
+    font-size: 40px;
+    text-shadow: 0 0 6px #a86c6c;
+    font-weight: bolder;
+}
+section.loginSection>div.presentation>p:nth-child(2){
+    font-size: 20px;
+}
+section.loginSection>form{
+    background-color: rgba(212, 110, 42, 0.014);
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+}
+
+section.loginSection>form>p{
+    font-size: 30px;
+    color: #2c1010;
+    font-weight: bold;
+    text-shadow: 0 0 1px #2c1010;
+}
+section.loginSection>form>div.inp{
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+
+
+    border-bottom: 2px solid #000;
+    min-width: 60%;
+}
+section.loginSection>form>div.inp>label{
+    position: absolute;
+    left: 29px;
+    pointer-events: none;
+    top: 11px;
+    color: rgb(56, 27, 219);
+}
+
+section.loginSection>form>div.inp>svg.indic{
+    color: rgb(49, 15, 240);
+}
+section.loginSection>form>div.inp>svg.secretEye{
+    color: rgb(47, 11, 173);
+    cursor: pointer;
+}
+section.loginSection>form>div.inp>svg.secretEye:hover{
+    color: rgb(112, 92, 184);
+    transition: all .5s;
+}
+section.loginSection>form>div.inp>input{
+    all: unset;
+    background:none;
+
+    min-height: 40px;
+    flex: 1;
+    padding: 0 11px;
+}
+
+/* section.loginSection>form>div.inp>input.inputForm:not(:placeholder-shown)~label, */
+section.loginSection>form>div.inp>input.inputForm:is(:focus, :valid)~label
+{
+    font-size: 12px;
+    top: -6px !important;
+
+    transition: all .5s ease;
+}
+
+
+
+section.loginSection>form>div.buttons
+{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+}
+section.loginSection>form>div.buttons>button
+{
+    min-height: 40px;
+    padding: 12px 70px;
+    border-radius: 50px;
+    border: none;
+    color: aliceblue;
+
+    cursor: pointer;
+    background-color: rgba(64, 64, 192, 0.822);
+}
+section.loginSection>form>div.buttons>button:hover{
+    background-color: rgba(86, 86, 216, 0.822);
+    transition: all .5s;
+}

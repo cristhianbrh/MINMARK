@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Open+Sans:wght@300&family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --header-height: 50px;
+    --nav-width: 10rem;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+header {
+    background-color: #4d91e4;
+    height: var(--header-height);
+    display: flex;
+    padding-right: 10px;
+
+    gap: 15px;
+    align-items: center;
+    justify-content: end;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.header a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+.header svg {
+    color: #fff9f9;
+    text-decoration: none;
+    display: block;
+}
+
+nav {
+    width: var(--nav-width);
+    background-color: #dfecfc;
+    color: #000;
+    height: calc(100vh - 50px);
+    position: absolute;
+    animation: nav_mostrar 2s forwards;
+    transition: left 1s forwards;
+
+    margin-top: 50px;
+}
+@keyframes nav_mostrar {
+    from{
+        left: -11rem;
+    }
+    to{
+        
+        left: 0rem;
+    }
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 12px;
+    overflow: hidden;
+}
+
+li {
+    padding: 10px;
+    display: flex;
+    cursor: pointer;
+    padding-left: 20px;
+}
+
+ul li svg {
+    margin-right: 8px;
+    height: 1em;
+    pointer-events: none;
+}
+ul li a {
+    pointer-events: none;
+}
+
+a {
+
+    color: #000;
+    text-decoration: none;
+    align-items: center;
+}
+
+ul li:hover {
+    background-color: #fff;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+body div.container{
+    flex: 1;
+    height: calc(100vh - var(--header-height));
+    width: 100%;
+    padding-top: var(--header-height);
+    padding-left: var(--nav-width);
+}
+
+body>section{
+    height: 100%;
+    overflow-y: auto;
+}
+
+
+
+
+
+section.section_Ventas>p:nth-child(1){
+    margin: 12px 30px;
+}
+section.section_Ventas>table{
+    border-collapse: collapse;
+    width: 90%;
+    margin: auto;
+    
+    border-radius: 20px;
+
+    color: #000;
+    font-family: 'Inter', sans-serif;
+}
+section.section_Ventas>table>thead{
+    /* border: 1px solid #000; */
+    height: 30px;
+    text-align: center;
+    
+    
+    font-size: 14px;
+    font-weight: 600;
+}
+section.section_Ventas>table>thead>tr{
+    border-radius: 12px;
+    background-color: rgba(60, 255, 0, 0.151);
+}
+
+section.section_Ventas>table>thead>tr>td{
+    border: 1px solid #21800460;
+}
+section.section_Ventas>table>tbody>tr{
+    cursor: pointer;
+}
+section.section_Ventas>table>tbody>tr>td{
+    padding-left: 12px;
+    border: 1px solid #21800460;
+    position: relative;
+}
+
+
+
+
+
+section.section_user>form.form_search{
+    display: flex;
+    gap: 12px;
+    justify-content: end;
+    align-items: center;
+    padding-right: 12px;
+    margin-bottom: 12px;
+}
+section.section_user>form.form_search>select{
+    background: transparent;
+   border: none;
+   font-size: 14px;
+   height: 30px;
+   padding: 5px;
+   border: 2px solid #2c2b2b8c;
+   border-radius: 6px;
+}
+section.section_user>form.form_search>input{
+    background: transparent;
+   border: 2px solid #2c2b2b8c;
+   border-radius: 6px;
+   font-size: 14px;
+   height: 30px;
+   padding: 0 5px;
+
+}
+
+
+section.section_user{
+    overflow: hidden;
+}
+section.section_user>form.detailsUser{
+    background-color: rgba(255, 153, 0, 0.24);
+
+    border-radius: 12px 12px 0 0;
+    position: absolute;
+    bottom: 0;
+    right: -100%;
+    /* left: var(--nav-width); */
+    margin-left: var(--nav-width);
+    /* display: flex; */
+    display: none;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 20px 15px 60px 15px;
+    justify-content: space-around;
+    /* align-items: ; */
+
+}
+section.section_user>form.detailsUser>svg.closeDetailsUser{
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+section.section_user>form.detailsUser>svg.closeDetailsUser:hover{
+    opacity: .8;
+}
+section.section_user>form.detailsUser__view{
+    display: flex;
+    animation: viewFormDetailsUser 2s forwards;
+}
+section.section_user>form.detailsUser__ocult{
+    display: flex;
+    right: -100%;
+    transition: all 5s;
+}
+@keyframes viewFormDetailsUser {
+    from{
+        right: -100%;
+    }
+    to{
+        right: 0;
+    }
+}
+
+
+
+section.section_user>form.detailsUser>div.input>svg.indic{
+    color: rgb(49, 15, 240);
+}
+section.section_user>form.detailsUser>div.input>svg.secretEye{
+    color: rgb(47, 11, 173);
+    cursor: pointer;
+}
+section.section_user>form.detailsUser>div.input>svg.secretEye:hover{
+    color: rgb(112, 92, 184);
+    transition: all .5s;
+}
+
+section.section_user>form.detailsUser>div.input{
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+
+
+    border-bottom: 2px solid #000;
+    min-width: 120px;
+}
+section.section_user>form.detailsUser>div.input>label{
+    position: absolute;
+    left: 29px;
+    pointer-events: none;
+    top: 11px;
+    color: rgb(56, 27, 219);
+}
+section.section_user>form.detailsUser>div.input>input{
+    all: unset;
+    background:none;
+
+    min-height: 40px;
+    flex: 1;
+    padding: 0 11px;
+}
+section.section_user>form.detailsUser>div.btns{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    gap: 15px;
+    padding: 12px;
+    
+}
+section.section_user>form.detailsUser>div.btns>button{
+    display: flex;
+    gap: 12px;
+    border: none;
+    cursor: pointer;
+    padding: 12px 15px;
+    border-radius: 50px;
+    color: aliceblue;
+
+}
+section.section_user>form.detailsUser>div.btns>button:nth-child(1){
+    background-color: rgba(64, 64, 192, 0.822);
+}
+section.section_user>form.detailsUser>div.btns>button:nth-child(2){
+    background-color: rgba(69, 175, 20, 0.822);
+}
+section.section_user>form.detailsUser>div.btns>button:nth-child(3){
+    background-color: rgba(204, 37, 37, 0.822);
+}
+section.section_user>form.detailsUser>div.btns>button:hover{
+    opacity: .8;
+}
+
+section.section_user>form.detailsUser>div.input>input.inputForm:is(:focus, :valid)~label
+{
+    font-size: 12px;
+    top: -6px !important;
+
+    transition: all .5s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+section.section_user>p:nth-child(1){
+    margin: 12px 30px;
+}
+section.section_user>table{
+    border-collapse: collapse;
+    width: 90%;
+    margin: auto;
+    
+    border-radius: 20px;
+
+    color: #000;
+    font-family: 'Inter', sans-serif;
+}
+section.section_user>table>thead{
+    /* border: 1px solid #000; */
+    height: 30px;
+    text-align: center;
+    
+    
+    font-size: 14px;
+    font-weight: 600;
+}
+section.section_user>table>thead>tr{
+    border-radius: 12px;
+    background-color: rgba(60, 255, 0, 0.151);
+}
+
+section.section_user>table>thead>tr>td{
+    border: 1px solid #21800460;
+}
+section.section_user>table>tbody>tr{
+    cursor: pointer;
+}
+section.section_user>table>tbody>tr:hover{
+    background-color: rgba(192, 212, 238, 0.452);
+}
+section.section_user>table>tbody>tr>td{
+    padding: 5px 0;
+    padding-left: 12px;
+    border: 1px solid #21800460;
+}
