@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --header-height: 50px;
+    --nav-width: 10rem;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+header {
+    background-color: #4d91e4;
+    height: var(--header-height);
+    display: flex;
+    padding-right: 10px;
+
+    gap: 15px;
+    align-items: center;
+    justify-content: end;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.header a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+.header svg {
+    color: #fff9f9;
+    text-decoration: none;
+    display: block;
+}
+
+nav {
+    width: var(--nav-width);
+    background-color: #dfecfc;
+    color: #000;
+    height: calc(100vh - 50px);
+    position: absolute;
+    animation: nav_mostrar 2s forwards;
+    transition: left 1s forwards;
+
+    margin-top: 50px;
+}
+@keyframes nav_mostrar {
+    from{
+        left: -11rem;
+    }
+    to{
+        
+        left: 0rem;
+    }
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 12px;
+    overflow: hidden;
+}
+
+li {
+    display: flex;
+    cursor: pointer;
+}
+
+ul li svg {
+    margin-right: 8px;
+    height: 1em;
+    pointer-events: none;
+}
+ul li a {
+    /* pointer-events: none; */
+}
+
+a {
+
+    color: #000;
+    text-decoration: none;
+    align-items: center;
+}
+
+nav>ul>li:hover {
+    background-color: #fff;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+body div.container{
+    flex: 1;
+    height: calc(100vh - var(--header-height));
+    width: 100%;
+    padding-top: var(--header-height);
+    padding-left: var(--nav-width);
+}
+
+body>section{
+    height: 100%;
+    overflow-y: auto;
+}
+
+
+nav>ul>li a{
+    display: flex;
+    padding: 10px;
+    padding-left: 20px;
+    /* background-color: red; */
+}
+nav>ul>li{
+    display: flex;
+    flex-direction: column;
+}
+nav>ul>li>ul>li{
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    gap: 0px;    
+    padding-left: 20px;
+}
+
+nav>ul>li>ul>li>a:hover{
+    background-color: rgba(166, 207, 17, 0.329) !important;
+    border-radius: 4px;
+    transition: all .5s;
+    
+}
