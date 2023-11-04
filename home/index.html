@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./style_mantenedor_categoria.css">
     <link rel="stylesheet" href="./component_input_style.css">
     <link rel="stylesheet" href="./component_button_style.css">
-    <title>Document</title>
+    <title>MINMARK</title>
 </head>
 
 <body>
@@ -41,7 +41,7 @@
                     </svg>Mantenedor</a>
                 <ul style="display: none;">
                     <li>
-                        <a onclick="viewChildrenNav(true, 'user')" class="nav_options "><svg
+                        <a onclick="viewChildrenNav(true, 'mantenedor_categoria')" class="nav_options "><svg
                                 xmlns="http://www.w3.org/2000/svg" height="1em" fill="currentColor" class="bi bi-tags"
                                 viewBox="0 0 16 16">
                                 <path
@@ -168,8 +168,9 @@
                 </tbody>
             </table>
             <form id="sectionUser_form_detailsUser" class="detailsUser">
-                <svg onclick="viewDataClick('sectionUser_form_detailsUser', 'detailsUser', 'detailsUser__ocult' )" xmlns="http://www.w3.org/2000/svg" width="30" height="30"
-                    fill="currentColor" class="bi bi-x-octagon-fill closeDetailsUser" viewBox="0 0 16 16">
+                <svg onclick="viewDataClick('sectionUser_form_detailsUser', 'detailsUser', 'detailsUser__ocult' )"
+                    xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                    class="bi bi-x-octagon-fill closeDetailsUser" viewBox="0 0 16 16">
                     <path
                         d="M11.46.146A.5.5 0 0 0 11.107 0H4.893a.5.5 0 0 0-.353.146L.146 4.54A.5.5 0 0 0 0 4.893v6.214a.5.5 0 0 0 .146.353l4.394 4.394a.5.5 0 0 0 .353.146h6.214a.5.5 0 0 0 .353-.146l4.394-4.394a.5.5 0 0 0 .146-.353V4.893a.5.5 0 0 0-.146-.353L11.46.146zm-6.106 4.5L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z" />
                 </svg>
@@ -275,40 +276,56 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <!-- appendOrEdit__desactive -->
+                    <tr
+                        onclick="viewDataClick('appendOrEditMantenedorCategory', 'appendOrEdit', 'appendOrEdit__active')">
                         <td>locdsadasals</td>
                         <td>local</td>
                     </tr>
-                    <tr>
+                    <tr
+                        onclick="viewDataClick('appendOrEditMantenedorCategory', 'appendOrEdit', 'appendOrEdit__active')">
                         <td>locdsadasal</td>
                         <td>local</td>
                     </tr>
-                    <tr>
+                    <tr
+                        onclick="viewDataClick('appendOrEditMantenedorCategory', 'appendOrEdit', 'appendOrEdit__active')">
                         <td>locdsadasal</td>
                         <td>local</td>
                     </tr>
-                    <tr>
+                    <tr
+                        onclick="viewDataClick('appendOrEditMantenedorCategory', 'appendOrEdit', 'appendOrEdit__active')">
                         <td>locdsadasal</td>
                         <td>local</td>
                     </tr>
-                    <tr>
+                    <tr
+                        onclick="viewDataClick('appendOrEditMantenedorCategory', 'appendOrEdit', 'appendOrEdit__active')">
                         <td>locdsadasal</td>
                         <td>local</td>
                     </tr>
-                    <tr>
+                    <tr
+                        onclick="viewDataClick('appendOrEditMantenedorCategory', 'appendOrEdit', 'appendOrEdit__active')">
                         <td>locdsadasal</td>
                         <td>local</td>
                     </tr>
-                    <tr>
+                    <tr
+                        onclick="viewDataClick('appendOrEditMantenedorCategory', 'appendOrEdit', 'appendOrEdit__active')">
                         <td>locdsadasal</td>
                         <td>local</td>
                     </tr>
                 </tbody>
             </table>
-            
-            <div class="appendOrEdit appendOrEdit__desactive">
+
+            <div id="appendOrEditMantenedorCategory" class="appendOrEdit appendOrEdit__desactive">
                 <form action="">
-                    <div class="inputsOptions " >
+                    <div class="inputsOptions ">
+
+                        <svg onclick="viewDataClick('appendOrEditMantenedorCategory', 'appendOrEdit', 'appendOrEdit__desactive' )"
+                            xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                            class="bi bi-x-octagon-fill closeDetailsUser" viewBox="0 0 16 16">
+                            <path
+                                d="M11.46.146A.5.5 0 0 0 11.107 0H4.893a.5.5 0 0 0-.353.146L.146 4.54A.5.5 0 0 0 0 4.893v6.214a.5.5 0 0 0 .146.353l4.394 4.394a.5.5 0 0 0 .353.146h6.214a.5.5 0 0 0 .353-.146l4.394-4.394a.5.5 0 0 0 .146-.353V4.893a.5.5 0 0 0-.146-.353L11.46.146zm-6.106 4.5L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z" />
+                        </svg>
+
                         <div class="componentInput_text_Style_container">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-ui-radios indic" viewBox="0 0 16 16">
@@ -340,7 +357,7 @@
                             <p>Agregar</p>
                         </button>
                         <button class="component_button_style" style="background-color: rgba(69, 175, 20, 0.822);">
-                            <svg xmlns="http://www.w3.org/2000/svg"  width="16" height="16" fill="currentColor"
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-trash" viewBox="0 0 16 16">
                                 <path
                                     d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z" />

@@ -2,6 +2,7 @@ const routes = {
     user: "section_user",
     mantenedor: "section_mantenedor",
     ventas: "section_ventas",
+    mantenedor_categoria: "section_mantenedor_categoria"
 }
 const sections = document.querySelectorAll('.sectionCamb');
 const nav_options = document.querySelectorAll('.nav_options');
@@ -42,4 +43,4 @@ function viewChildrenNav(notIsParent = false, rt) {
         actual.style.background = "#ffaa";
     }
 }
-// goNewSection('user')
+viewChildrenNav(true, 'user')

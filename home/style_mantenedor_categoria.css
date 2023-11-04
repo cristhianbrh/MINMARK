@@ -38,7 +38,17 @@ section.section_mantenedor_categoria .appendOrEdit>form>.inputsOptions{
     flex-direction: column;
     gap: 40px;
     padding: 0 50px;
+    padding-top: 80px;
     justify-content: center;
+}
+section.section_mantenedor_categoria .appendOrEdit>form>.inputsOptions>svg{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+section.section_mantenedor_categoria .appendOrEdit>form>.inputsOptions>svg:hover{
+    opacity: .8;
 }
 section.section_mantenedor_categoria .appendOrEdit>form>.inputsOptions>div:nth-child(2){
     margin: auto;
