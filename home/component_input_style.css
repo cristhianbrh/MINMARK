@@ -1,0 +1,150 @@
+/* Input text */
+section div.componentInput_text_Style_container {
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+
+
+    border-bottom: 2px solid #000;
+    min-width: 120px;
+}
+
+section div.componentInput_text_Style_container>svg.indic {
+    color: rgb(49, 15, 240);
+}
+
+section div.componentInput_text_Style_container>svg.secretEye {
+    color: rgb(47, 11, 173);
+    cursor: pointer;
+}
+
+section div.componentInput_text_Style_container>svg.secretEye:hover {
+    color: rgb(112, 92, 184);
+    transition: all .5s;
+}
+
+
+
+
+section div.componentInput_text_Style_container>label {
+    position: absolute;
+    left: 29px;
+    pointer-events: none;
+    top: 11px;
+    color: rgb(56, 27, 219);
+}
+
+section div.componentInput_text_Style_container>input {
+    all: unset;
+    background: none;
+
+    min-height: 40px;
+    flex: 1;
+    padding: 0 11px;
+}
+
+section div.componentInput_text_Style_container>input.inputForm:is(:focus, :valid)~label {
+    font-size: 12px;
+    top: -6px !important;
+
+    transition: all .5s ease;
+}
+
+
+
+
+/* END Input text */
+
+
+/* Input checkbox */
+:root {
+    --componentInput_checkbox_Style_container__width: 60px;
+    --componentInput_checkbox_Style_container__height: 30px;
+}
+
+.componentInput_checkbox_Style_container {
+    display: flex;
+    gap: 14px;
+    color: rgb(30, 30, 228);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 50px;
+}
+
+
+.componentInput_checkbox_Style_container>p {
+    font-weight: bolder;
+}
+
+.componentInput_checkbox_Style_container>input {
+    background-color: red;
+    position: relative;
+    transform: translateX(10px);
+    transform: translateY(-8px);
+}
+
+.componentInput_checkbox_Style_container>input::before {
+    content: "";
+    width: var(--componentInput_checkbox_Style_container__width);
+    height: var(--componentInput_checkbox_Style_container__height);
+    background-color: rgb(176, 232, 236);
+    display: block;
+    border-radius: 50px;
+    cursor: pointer;
+    transform: translateX(-10px);
+}
+
+.componentInput_checkbox_Style_container>input:after {
+    transform: translateX(-10px);
+    cursor: pointer;
+    content: "";
+    width: var(--componentInput_checkbox_Style_container__height);
+    height: var(--componentInput_checkbox_Style_container__height);
+    background-color: green;
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    top: 0px;
+    /* transform: translateX(var(--componentInput_checkbox_Style_container__height)); */
+}
+
+.componentInput_checkbox_Style_container>input:checked::after {
+    animation: componentInput_checkbox_Style_container__transitionActive .3s linear forwards;
+    animation-fill-mode: forwards;
+}
+
+.componentInput_checkbox_Style_container>input:not(:checked)::after {
+
+    animation: componentInput_checkbox_Style_container__transitionNoActive .3s ease forwards;
+    animation-fill-mode: forwards;
+}
+
+@keyframes componentInput_checkbox_Style_container__transitionActive {
+    from {
+        transform: translateX(-var(--componentInput_checkbox_Style_container__height));
+        background-color: rgb(255, 81, 0);
+    }
+
+    to {
+        transform: translateX( calc(var(--componentInput_checkbox_Style_container__height) - 10px) );
+        background-color: rgb(30, 255, 0);
+    }
+}
+
+@keyframes componentInput_checkbox_Style_container__transitionNoActive {
+    from {
+        transform: translateX( calc(var(--componentInput_checkbox_Style_container__height) - 10px) );
+        background-color: rgb(30, 255, 0);
+    }
+
+    to {
+        transform: translateX(-var(--componentInput_checkbox_Style_container__height));
+        background-color: rgb(255, 81, 0);
+    }
+}
+
+/* END Input checkbox */

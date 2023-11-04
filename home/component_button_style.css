@@ -1,0 +1,22 @@
+button.component_button_style{
+    display: flex;
+    gap: 12px;
+    border: none;
+    cursor: pointer;
+    padding: 12px 15px;
+    border-radius: 50px;
+    color: aliceblue;
+}
+button.component_button_style:hover{
+    opacity: .8;
+}
+
+/* section.section_user>form.detailsUser>div.btns>button:nth-child(1){
+    background-color: rgba(64, 64, 192, 0.822);
+}
+section.section_user>form.detailsUser>div.btns>button:nth-child(2){
+    background-color: rgba(69, 175, 20, 0.822);
+}
+section.section_user>form.detailsUser>div.btns>button:nth-child(3){
+    background-color: rgba(204, 37, 37, 0.822);
+} */

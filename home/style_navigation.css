@@ -52,6 +52,7 @@ nav {
     transition: left 1s forwards;
 
     margin-top: 50px;
+    overflow-y: auto;
 }
 @keyframes nav_mostrar {
     from{

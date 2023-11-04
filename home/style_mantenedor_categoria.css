@@ -1,5 +1,103 @@
-.section_mantenedor_categoria{
-    background-color: red;
+section.section_mantenedor_categoria{
+    /* background-color: red; */
     height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* form */
+section.section_mantenedor_categoria .appendOrEdit{
+    background-color: rgb(239, 243, 207);
+    position: absolute;
+    width: 40%;
+    bottom: 0;
+    border-radius: 10px 10px 0 0;
+    padding: 15px 15px;
+}
+/* append aparecer */
+section.section_mantenedor_categoria .appendOrEdit__desactive{
+    right: -100%;
+    transition: all 2s;
+}
+section.section_mantenedor_categoria .appendOrEdit__active{
+    right: 0;
+    transition: all 2s;
+}
+.section_mantenedor_categoria form .componentInputStyle_container
+{
+    width: 300px;
+}
+section.section_mantenedor_categoria .appendOrEdit>form{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
     
 }
+section.section_mantenedor_categoria .appendOrEdit>form>.inputsOptions{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 0 50px;
+    justify-content: center;
+}
+section.section_mantenedor_categoria .appendOrEdit>form>.inputsOptions>div:nth-child(2){
+    margin: auto;
+    
+}
+section.section_mantenedor_categoria .appendOrEdit>form>.buttons{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+/* end form */
+
+
+
+
+
+
+/* Container */
+section.section_mantenedor_categoria{
+    padding-top: 12px;
+}
+section.section_mantenedor_categoria table{
+    border-collapse: collapse;
+    width: 90%;
+    margin: auto;
+    
+    border-radius: 20px;
+
+    color: #000;
+    font-family: 'Inter', sans-serif;
+}
+section.section_mantenedor_categoria  table>thead{
+    /* border: 1px solid #000; */
+    height: 30px;
+    text-align: center;
+    
+    
+    font-size: 14px;
+    font-weight: 600;
+}
+section.section_mantenedor_categoria table>thead>tr{
+    border-radius: 12px;
+    background-color: rgba(60, 255, 0, 0.151);
+}
+
+section.section_mantenedor_categoria table>thead>tr>td{
+    border: 1px solid #21800460;
+}
+section.section_mantenedor_categoria table>tbody>tr{
+    cursor: pointer;
+}
+section.section_mantenedor_categoria table>tbody>tr:hover{
+    background-color: rgba(192, 212, 238, 0.452);
+}
+section.section_mantenedor_categoria table>tbody>tr>td{
+    padding: 5px 0;
+    padding-left: 12px;
+    border: 1px solid #21800460;
+}
+
+
+/* END Container */
